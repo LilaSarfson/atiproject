@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import 'devextreme/dist/css/dx.light.css';
+import Chart, {
+  ArgumentAxis,
+  Series,
+  Legend
+} from 'devextreme-react/chart';
 
+const data = [{
+  arg: 1990,
+  val: 5320816667
+}, {
+  arg: 2000,
+  val: 6127700428
+}, {
+  arg: 2010,
+  val: 6916183482
+}];
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Chart dataSource={data}>
+                <ArgumentAxis tickInterval={10} />
+                <Series type="bar" />
+                <Legend visible={false} />
+            </Chart>
     </div>
   );
 }
