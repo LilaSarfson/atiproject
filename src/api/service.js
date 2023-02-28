@@ -1,4 +1,4 @@
-export function fetchData (){
+export function fetchData (setData){
     const URL= "http://intranet.taionline.net:14036/api/loadtfunction"
     fetch(URL, {
     method: 'POST',
@@ -18,7 +18,7 @@ export function fetchData (){
         
             }
     }).then(response => {
-        console.log(response)
+        setData(response) 
     })
     .catch(error =>{
         console.log(error)

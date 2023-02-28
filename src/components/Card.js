@@ -1,30 +1,23 @@
 import {
     Chart, Series, Legend, ValueAxis
   } from 'devextreme-react/chart';
-  import { TextArea } from 'devextreme-react/text-area';
-  import { Button } from 'devextreme-react/button';
+  import GridData from './GridData.';
 export default function Card (props){
     const axis = [0,50,100]
     return(
         <>
-        <div class="w-1/5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <h1>{props.title}</h1>
-            <div className='flex flex-row justify-center gap-4'>
-            <TextArea 
-                value={`Speed: ${props.speed}`}
-            />
-            <Button  text={props.button} />
-            </div> 
-            <hr/>
-        <div>
-            <p>Active work order:</p>
-            <p>Product</p>
-            <p>{props.order}</p>
-            <p>{props.product}</p>
-            <p>Product name:</p>
-            <p>{props.pname}</p>
-        </div>    
+        <div className="w-1/5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
+            <GridData
+            button = {props.button}
+            order= {props.order}
+            product= {props.product}
+            name= {props.pname}
+            title={props.title}
+            speed={props.speed}
+            required={props.required}
+            produced={props.produced}
+            />
         {/* PORCENTAJES */}
             <Chart
                 id="chart"
