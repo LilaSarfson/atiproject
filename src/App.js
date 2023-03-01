@@ -27,10 +27,11 @@ function App() {
       {
      machinesData.map((obj, index)=>{return(
       <Chart
+      rotated={true}
       id="chart"
       palette="Soft"
       title="Percent of Total Energy Production"
-      dataSource={filteredData(index)}
+      dataSource={filteredData(index+1)}
     >
       <CommonSeriesSettings
         argumentField="wkuname"
