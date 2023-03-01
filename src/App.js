@@ -22,7 +22,7 @@ function App() {
   return (
     <div id="App" className="App flex flex-col justify-center gap-8">
       <h1 className='text-center'>ATIsmartfactory</h1>
-     <div className='flex flex-row flex-wrap gap-4 w-full justify-center m-0'>
+     <div className='flex flex-wrap gap-6 justify-center w-full'>
       {
         dataMachines.map((mach, index) =>{return(<Card
         key={index}

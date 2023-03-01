@@ -3,7 +3,8 @@ import ChartComponent from './Chart';
 export default function Card (props){
     return(
   
-        <div className="w-1/6 h-4/6 flex flex-col justify-around bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="min-w-10p flex flex-col justify-around bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 
+        drop-shadow-xl">
             <GridData
             button = {props.button}
             order= {props.order}
