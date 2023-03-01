@@ -1,28 +1,41 @@
+import Textbox from "./Textbox"
 export default function GridData (props){
     return(
-        <section className="m-auto">
-            <h3 className="text-sm text-center">{props.title}</h3>
+        <section className="m-0 flex flex-col gap-2">
+            <h5 className="text-sm text-center">{props.title}</h5>
             <div className='flex flex-row justify-center gap-4'>
-                <p className="shadow-lg rounded-md ">{`Speed: ${props.speed}`}</p>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            <Textbox
+            text={`Speed: ${props.speed}`}
+            />                
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-lg">
                  {props.button}</button>
             </div> 
             <hr/>
-            <div className="flex flex-row justify-center">
-                <p>Active work order:</p>
-                <p className="shadow-md rounded-md w-min p-1">{props.order}</p>
-                <p>Product</p>
-                <p className="shadow-md rounded-md w-min p-1">{props.product}</p>
+            <div className="flex flex-row justify-around">
+                <Textbox
+            title="Active work order:"    
+            text={props.order}
+                />
+                <Textbox
+            title="Product:"    
+            text={props.product}
+            />   
             </div>    
-            <div className="flex flex-col w-min m-auto">
-                <p>Product name:</p>
-                <p className="shadow-md rounded-md ">{props.name}</p> 
+            <div className="m-auto">
+                <Textbox
+            title="Product name:"    
+            text={props.name}
+                /> 
             </div>
-            <div className="flex flex-row justify-center">
-                <p>Quantity required:</p>
-                <p className="shadow-md rounded-md w-min p-1">{props.required}</p>
-                <p>Quantity produced</p>
-                <p className="shadow-md rounded-md w-min p-1">{props.produced}</p>
+            <div className="flex flex-row justify-around">
+                <Textbox
+            title="Quantity required:"    
+            text={props.required}
+                />
+                <Textbox
+            title="Quantity produced:"    
+            text={props.produced}
+                />
             </div>    
         </section> 
 )}
