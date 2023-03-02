@@ -1,3 +1,5 @@
+//Un fetch ficticio de los datos de la API.
+
 export function fetchData (setData){
     const URL= "http://intranet.taionline.net:14036/api/loadtfunction"
     fetch(URL, {

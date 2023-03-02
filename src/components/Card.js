@@ -3,7 +3,7 @@ import ChartComponent from './Chart';
 export default function Card (props){
     return(
   
-        <div className="min-w-10p flex flex-col justify-around bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 
+        <div className="min-w-10p flex flex-col justify-around bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8
         drop-shadow-xl">
             <GridData
             button = {props.button}
@@ -27,3 +27,5 @@ export default function Card (props){
 
     )
 }
+
+//Componente Cards engloba todo los demás componentes, actuando únicamente como contenedo y receptor de datos.
