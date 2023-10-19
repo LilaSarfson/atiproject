@@ -17,13 +17,13 @@ function App() {
 
   //Filtro el array de dataMachines para acceder a cada uno de los elementos según su índice y que así, el componente CHART me pinte cada uno de ellos, ya que su propiedad "DataSource" sólo admite un array de objetos o un JSON.
   function FilterChartData (indexObj){
-    let resultado = dataMachines.filter((e, index )=> index === indexObj)
-    return resultado
+    let response = dataMachines.filter((e, index )=> index === indexObj)
+    return response
   }
   return (
     <div id="App" className='App'>
       <div  className="flex flex-col gap-8 my-4">
-        <h1 className='text-center'>ATI<span className='text-red-600 underline underline-offset-1'>smartfactory</span></h1>
+        <h1 className='text-center'>Welcome to <span className='text-red-600 font-bold underline-offset-1'>Chart's Show</span></h1>
         <div className='flex flex-wrap gap-6 justify-center w-full'>
         {
           //Uso la función map para pintar el componente Card tantas veces como elementos haya en el array de dataMachines.
